@@ -6,11 +6,23 @@
 .d-flex{
     display: flex;
 }
+@media screen and (max-width: 992px){
+    .container {
+        max-width: 1064px;
+        padding: 0 36px;
+    }
+}
 /*平板*/
 @media screen and (max-width: 767px){
     .container{
         max-width: 720px; /*768 - 36 - 36 + 12 + 12*/
         padding: 0 36px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .container{
+        max-width: 605px; 
+        padding: 0 15px;
     }
 }
 /*手機*/
@@ -20,6 +32,7 @@
         padding: 0 13px;
     }
 }
+/*其他斷點: 992px 575px*/
 
 /*header*/
 .header{
@@ -155,12 +168,6 @@
         padding: 40px 0;
     }
 }
-.feature-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
 .feature h2{
     font-size: 48px;
     line-height: 72px;
@@ -213,4 +220,174 @@
     font-size: 16px;
     line-height: 24px;
     color: #000;
+}
+
+/*classic*/
+.classic{
+    padding: 80px 0;
+    text-align: center;
+}
+@media screen and (max-width: 575px){
+    .classic{
+        padding: 40px 0;
+    }
+}
+@media screen and (max-width: 992px) {
+    .classic .container{
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .classic .container{
+        max-width: 605px;
+    }
+}
+.classic h2{
+    font-size: 48px;
+    line-height: 1.5;
+    color: #650300;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+}
+@media screen and (max-width: 575px){
+    .classic h2{
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+.classic-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 992px) {
+    .classic-list{
+        flex-wrap: wrap;
+        row-gap: 24px;  /*上下距離*/
+    }
+}
+.classic-list li{
+    width: calc((100% - 48px) / 3);
+}
+@media screen and (max-width: 992px) {
+    .classic-list li{
+        width: 100%;
+    }
+}
+.classic-list img{
+    max-width: 100%;
+    margin-bottom: 8px;
+}
+.classic-list h3{
+    font-size: 48px;
+    line-height: 1.5;
+    color: #AA0601;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto", serif;
+    font-style: italic;
+}
+@media screen and (max-width: 767px) {
+    .classic-list h3 {
+      font-size: 32px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .classic-list h3 {
+      font-size: 48px;
+    }
+}
+
+/*joint聯名*/
+.joint{
+    background-image: url(../imgs/index-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+@media screen and (max-width: 992px){
+    .joint{
+        padding: 80px 0;
+    }
+}
+@media screen and (max-width: 575px){
+    .joint{
+      padding: 40px 0;
+    }
+}
+@media screen and (max-width: 992px){
+    .joint{
+      background-image: url("../imgs/index-bg-sm.png");
+      background-position: center top;
+    }
+}
+@media screen and (max-width: 575px){
+    .joint{
+      background-image: url("../imgs/index-bg-md.png");
+    }
+}
+.joint h2{
+    font-size: 48px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.joint .joint-list{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 992px){
+    .joint .joint-list{
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
+}
+.joint .joint-list li{
+    width: 50%;
+    border: 0.5px solid #707070;
+}
+.joint .joint-list li:first-child{
+    border-right: 0px;
+}
+@media screen and (max-width: 992px){
+    .joint .joint-list li{
+        width: 100%;
+    }
+}
+.joint .joint-d{
+    background-image: url(../imgs/home-section4-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+}
+.joint .joint-y{
+    background-image: url(../imgs/home-section4-2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+}
+@media screen and (max-width: 575px) {
+    .joint .joint-d{
+        background-image: url(../imgs/home-section4-1-sm.png);
+    }
+    .joint .joint-y{
+        background-image: url(../imgs/home-section4-2-sm.png);
+
+    }
+  }
+.joint h3{
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    color: #AA0601;
+    font-family: "Roboto", serif;
+    font-style: italic;
 }
